@@ -1,0 +1,879 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#CompaitableWithAircraft -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#CompaitableWithAircraft">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasType"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#CompaitableWithGate"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#CompaitableWithGate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#CompaitableWithGate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasType"/>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#CompaitableWithAircraft"/>
+            </rdf:Description>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#consistFacility -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#consistFacility">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airTrafficControllerTower"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceShop"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#passengerTerminal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#consistPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#consistPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#for -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#for">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceShop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasOn">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#isOn"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasPosition">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#hasType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#isOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#isOn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#leadTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#leadTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Class -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Class">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Narrow Body</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Wide Body</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Elevation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Elevation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Length -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Length">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Manufacturer -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airCraftID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airCraftID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airCraftType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airCraftType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfieldID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfieldID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</xsd:maxLength>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airportName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airportName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#engineCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#engineCount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gateCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gateCapacity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gateNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gateNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceStatus">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>locked</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>open</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maxSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maxSpeed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runWayType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runWayType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Asphalt</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Grass</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runwayName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runwayName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiWayName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiWayName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:length rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</xsd:length>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#usageType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#usageType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Charter</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Civilian</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>Military</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airTrafficControllerTower -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airTrafficControllerTower"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft">
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airCraftID"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield">
+        <owl:hasKey rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfieldID"/>
+        </owl:hasKey>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceShop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceShop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#passengerTerminal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#passengerTerminal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#leadTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A320 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A320">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <Manufacturer>AirBus</Manufacturer>
+        <airCraftType>A320</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A330 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A330">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <Manufacturer>AirBus</Manufacturer>
+        <airCraftType>A330</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A380 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <Manufacturer>AirBus</Manufacturer>
+        <airCraftType>A380</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <hasType rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A330"/>
+        <isOn rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_1"/>
+        <Class>Wide Body</Class>
+        <airCraftID>SKU10</airCraftID>
+        <aircraftCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</aircraftCapacity>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineCount>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</maxSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <hasType rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A380"/>
+        <isOn rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_1"/>
+        <Class>Wide Body</Class>
+        <airCraftID>KMN20</airCraftID>
+        <aircraftCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</aircraftCapacity>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineCount>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</maxSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <hasType rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_737"/>
+        <isOn rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_3"/>
+        <Class>Narrow Body</Class>
+        <airCraftID>STU30</airCraftID>
+        <aircraftCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</aircraftCapacity>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineCount>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</maxSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Aircraft_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+        <hasType rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_787"/>
+        <isOn rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_4"/>
+        <Class>Narrow Body</Class>
+        <airCraftID>UWD20</airCraftID>
+        <aircraftCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</aircraftCapacity>
+        <engineCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineCount>
+        <maxSpeed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</maxSpeed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airfield_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airfield_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_1"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_2"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_1"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_2"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_1"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_2"/>
+        <Elevation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</Elevation>
+        <airfieldID>HELA</airfieldID>
+        <usageType>Military</usageType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airfield_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airfield_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_3"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_4"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_5"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_3"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_4"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_3"/>
+        <consistPosition rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_4"/>
+        <Elevation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</Elevation>
+        <airfieldID>CAI</airfieldID>
+        <usageType>Civilian</usageType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airport_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airport_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport"/>
+        <consistFacility rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airfield_2"/>
+        <airportName>Cairo International Airport</airportName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airport_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airport_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport"/>
+        <consistFacility rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airfield_1"/>
+        <airportName>Almaza Airport</airportName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_737 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_737">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <Manufacturer>Boeing</Manufacturer>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">737</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_767 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_767">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <Manufacturer>Boeing</Manufacturer>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">767</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_787 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_787">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraftType"/>
+        <Manufacturer>Boeing</Manufacturer>
+        <airCraftType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">787</airCraftType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A320"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A330"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A380"/>
+        <gateCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</gateCapacity>
+        <gateNumber>A1</gateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A330"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A380"/>
+        <gateCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</gateCapacity>
+        <gateNumber>A2</gateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_737"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_767"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_787"/>
+        <gateCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</gateCapacity>
+        <gateNumber>B1</gateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Airbus_A320"/>
+        <gateCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</gateCapacity>
+        <gateNumber>B2</gateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Gate_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+        <CompaitableWithAircraft rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Boeing_787"/>
+        <gateCapacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</gateCapacity>
+        <gateNumber>C1</gateNumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <leadTo rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_2"/>
+        <Length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</Length>
+        <runWayType>Grass</runWayType>
+        <runwayName>05C</runwayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <leadTo rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_1"/>
+        <Length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</Length>
+        <runWayType>Asphalt</runWayType>
+        <runwayName>14D</runwayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <leadTo rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_3"/>
+        <Length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</Length>
+        <runWayType>Asphalt</runWayType>
+        <runwayName>06D</runwayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Runway_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#runway"/>
+        <leadTo rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_4"/>
+        <Length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</Length>
+        <runWayType>Asphalt</runWayType>
+        <runwayName>02E</runwayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+        <maintenanceStatus>open</maintenanceStatus>
+        <taxiWayName>A</taxiWayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+        <maintenanceStatus>locked</maintenanceStatus>
+        <taxiWayName>M</taxiWayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+        <maintenanceStatus>locked</maintenanceStatus>
+        <taxiWayName>B</taxiWayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#Taxiway_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#taxiway"/>
+        <maintenanceStatus>open</maintenanceStatus>
+        <taxiWayName>K</taxiWayName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airTrafficControllerTower"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#aircraft"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airfield"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#airport"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#gate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#groundSurface"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#maintenanceShop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/acer/ontologies/2022/11/untitled-ontology-4#passengerTerminal"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
